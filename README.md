@@ -5,6 +5,7 @@ This project applies an end-to-end sentiment analysis pipeline to the Amazon Fin
 
 # Architecture
 The workflow leverages AWS cloud services for scalable sentiment analysis:
+
 	1.	Reviews are uploaded to a customer review bucket.
 	2.	A Lambda function triggers the Amazon Comprehend API for sentiment analysis.
 	3.	Results are stored in a sentiment folder in S3.
@@ -12,8 +13,8 @@ The workflow leverages AWS cloud services for scalable sentiment analysis:
 
 ⸻
 
-# Features
-  •	Text Preprocessing: cleaning, stopword removal, tokenization, lemmatization.
+# Features	
+    • Text Preprocessing: cleaning, stopword removal, tokenization, lemmatization.
 	•	User Anonymization: SHA-256 hashing for privacy.
 	•	Sentiment Analysis:
 	•	Amazon Comprehend (cloud NLP API).
@@ -25,8 +26,8 @@ The workflow leverages AWS cloud services for scalable sentiment analysis:
 ⸻
 
 # Dataset
-
 The project uses the Amazon Fine Food Reviews dataset (Kaggle).
+
 	•	Approximately 568,000 reviews.
 	•	Features: review text, score, helpfulness, product information.
 
