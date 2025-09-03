@@ -1,1 +1,19 @@
+## AWS Comprehend Reference Architecture
 
+Amazon Comprehend can be integrated into a cloud workflow to analyze large-scale customer reviews automatically.  
+The diagram below shows a reference architecture provided by AWS:
+
+![AWS Comprehend Architecture](docs/images/customer-reviews-comprehend-1.gif)
+
+### Workflow Explanation
+1. **Customer Review Upload**: Reviews are uploaded into an Amazon S3 bucket.  
+2. **Event Trigger**: An event (new file in bucket) triggers a Lambda function.  
+3. **Sentiment Analysis**: The Lambda function calls the **Amazon Comprehend API** to analyze sentiment.  
+4. **Results Storage**: The sentiment results are saved into another folder in S3.  
+5. **Querying**: Amazon Athena allows interactive querying of sentiment results directly from S3.  
+
+### Relation to This Project
+In this project, the workflow is simplified:
+- Data preprocessing and uploads were performed manually.  
+- Sentiment analysis was handled through **Amazon Comprehend** and traditional ML models in SageMaker.  
+- Visualization and evaluation were completed directly in Jupyter notebooks instead of Athena.  
